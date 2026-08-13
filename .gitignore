@@ -12,6 +12,24 @@ web_modules/
 *.pem
 *.key
 
+# Large Binary Files & Media (Prevents GitHub RPC errors)
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.apk
+*.exe
+*.msix
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.pdf
+
 # Build and Output
 dist/
 build/
@@ -19,8 +37,6 @@ out/
 .next/
 bin/
 obj/
-*.apk
-*.exe
 
 # Python Cache
 __pycache__/

@@ -4995,3 +4995,30 @@ Please use the Async API instead.
 2026-08-13 00:06:24,579 [INFO] werkzeug: 127.0.0.1 - - [13/Aug/2026 00:06:24] "[33mGET /api/admin/theme HTTP/1.1[0m" 404 -
 2026-08-13 00:06:31,266 [INFO] werkzeug:  * Detected change in 'D:\\etihad airways\\main.py', reloading
 2026-08-13 00:06:31,704 [INFO] werkzeug:  * Restarting with stat
+2026-08-13 00:06:59,643 [INFO] Orchestrator: Starting Airline Passenger Automation process in mode: all...
+2026-08-13 00:06:59,644 [INFO] Orchestrator: Loading input file: Etihad passenger details 9th Aug.xlsx
+2026-08-13 00:07:00,503 [INFO] Orchestrator: Loaded columns: ['nan', 'Last Name', 'PNR']
+2026-08-13 00:07:00,503 [INFO] Orchestrator: Mapping columns: PNR -> 'PNR', Last Name -> 'Last Name'
+2026-08-13 00:07:01,846 [INFO] Orchestrator: Initializing Etihad Scraper browser session...
+2026-08-13 00:07:01,846 [INFO] src.etihad_scraper: Starting Playwright browser for Etihad Scraper...
+2026-08-13 00:07:03,938 [INFO] Orchestrator: --- Processing Passenger 1/4: PNR 9W4PEY, Last Name: HUMEAU MOUSSET ---
+2026-08-13 00:07:03,938 [INFO] src.etihad_scraper: Accessing booking for PNR: 9W4PEY, Last Name: HUMEAU MOUSSET
+2026-08-13 00:07:34,635 [INFO] src.etihad_scraper: Successfully accessed booking for PNR: 9W4PEY
+2026-08-13 00:07:35,495 [INFO] src.etihad_scraper: Extracted details for HUMEAU MOUSSET: {'passenger_name': 'Passenger HUMEAU MOUSSET', 'flight_number': 'Flight Info'}
+2026-08-13 00:07:35,538 [INFO] root: Successfully saved data to Etihad passenger details 9th Aug_Processed.xlsx
+2026-08-13 00:07:35,538 [INFO] Orchestrator: Stopping Etihad Scraper browser session...
+2026-08-13 00:07:38,949 [INFO] src.etihad_scraper: Etihad Scraper stopped.
+2026-08-13 00:07:38,950 [INFO] Orchestrator: --- Processing Passenger 2/4: PNR DSSP38, Last Name: JUDES ---
+2026-08-13 00:07:38,950 [INFO] src.etihad_scraper: Starting Playwright browser for Etihad Scraper...
+2026-08-13 00:07:43,810 [INFO] src.etihad_scraper: Accessing booking for PNR: DSSP38, Last Name: JUDES
+2026-08-13 00:08:30,942 [INFO] src.etihad_scraper: Successfully accessed booking for PNR: DSSP38
+2026-08-13 00:08:35,390 [INFO] src.etihad_scraper: Scanning lines below passenger JUDES: ['SAUDIA Loyalty No: 1006486472', 'Sydney to Abu Dhabi', 'Business Value', '9A']
+2026-08-13 00:08:35,391 [INFO] src.etihad_scraper: Frequent flyer loyalty number found below passenger name: SAUDIA Loyalty No: 1006486472
+2026-08-13 00:08:35,391 [INFO] Orchestrator: Frequent Flyer already present on Etihad for PNR DSSP38. Skipping.
+2026-08-13 00:08:35,393 [INFO] Orchestrator: --- Processing Passenger 3/4: PNR 9W4PFY, Last Name: MOUSSET ---
+2026-08-13 00:08:35,393 [INFO] src.etihad_scraper: Accessing booking for PNR: 9W4PFY, Last Name: MOUSSET
+2026-08-13 00:08:50,686 [INFO] src.etihad_scraper: Successfully accessed booking for PNR: 9W4PFY
+2026-08-13 00:08:51,587 [INFO] src.etihad_scraper: Scanning lines below passenger MOUSSET: ['JM', 'Adult', 'Mr Jules Mousset', 'Download the Etihad app']
+2026-08-13 00:08:54,143 [INFO] src.etihad_scraper: Extracted details for MOUSSET: {'passenger_name': 'Miss Karelle Humeau Mousset', 'flight_number': 'Sydney to Paris'}
+2026-08-13 00:08:54,542 [INFO] root: Successfully saved data to Etihad passenger details 9th Aug_Processed.xlsx
+2026-08-13 00:08:54,542 [INFO] Orchestrator: Stopping Etihad Scraper browser session...
